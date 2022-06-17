@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <style>
+
+        #moreText {
+            display: none;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1 style="color: red;">
+        Dupa
+    </h1>
+  
+    <p>
+        Jakiś kurwa tekst ja pierdole. 
+        <span id="points">...</span>
+  
+
+        <span id="moreText"> więcej chujowego tekstu,
+        </span>
+
+        
+    </p>
+  
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZKaLvJYSj5U" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+    </p>
+  
+
+    <button onclick="ShowMore()" id="textButton">
+        Pokaż wincyj
+    </button>
+
+  
+    <script>
+        function ShowMore() {
+            
+            var points = 
+                document.getElementById("points");
+
+            var showMoreText =
+                document.getElementById("moreText");
+  
+            var buttonText =
+                document.getElementById("textButton");
+  
+
+            if (points.style.display === "none") {
+
+                showMoreText.style.display = "none";
+
+                points.style.display = "inline";
+
+                buttonText.innerHTML = "Pokaż tekst";
+            }
+  
+
+            else {
+
+                showMoreText.style.display = "inline";
+  
+                points.style.display = "none";
+
+                buttonText.innerHTML = "Ukryj tekst";
+            }
+        }
+    </script>
+</body>
+  
+</html>
