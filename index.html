@@ -3,7 +3,9 @@
   
 <head>
     <style>
-
+        figure{
+            display: inline-block;
+        }
         #moreText {
             display: none;
         }
@@ -12,31 +14,91 @@
   
 <body>
     <h1 style="color: red;">
-        Dupa
+        FLEX TAPE
     </h1>
-  
-    <p>
-        Jakiś kurwa tekst ja pierdole. 
+    <br />
+    <p style="line-height:3.5em;">
+        UPER STRONG WATERPROOF TAPE
+
+        Powerful adhesive with a thick, flexible rubberized backing that conforms to virtually any shape and surface, even underwater. Gets stronger with time and pressure. UV resistant, VOC- free, withstands extreme temperature and weather conditions.<br />
         <span id="points">...</span>
-  
+        <span id="moreText"> 
+            
+            <span>• Plumbing repairs<br />
+                • Seal out air and water<br />
+                • General home repairs<br />
+                • Fast fixes on boats, autos or RVs<br />
+                • Roof repairs<br />
+                • Pool repairs<br />
+                • Bath and shower<br />
+                • DIY projects and much more<br />
+            </span>
 
-        <span id="moreText"> więcej chujowego tekstu,
+            Works on: PVC, acrylic, metal, steel, copper, aluminum, wood, ceramic, porcelain, tile, glass, rubber, fiberglass, stucco, plaster, stone, cement, concrete, dry wall, EPDM roofs, some plastics, fabrics, vinyl and more.
         </span>
-
         
     </p>
-  
+    
+    <button onclick="ShowMore()" id="textButton"> Pokaż więcej
+    </button>
+    <br />
+    <h1 style="color: red;">
+        Zobacz nasze produkty!!!
+    </h1>
+
     <p>
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=nQ9Qfhi4LcA" frameborder="0" allowfullscreen></iframe>
+        <row>
+            <figure>
+                <img width = "500" height="600" src='flex-tape.jpg' alt='missing' />
+                <figcaption>                
+                    <form action="https://flexsealproducts.com/products/flex-tape">
+                        <input type="submit" value="Szczegóły" />
+                    </form>
+                </figcaption>
+            </figure>
+            <figure>
+                <img width = "500" height="600" src='flex-seal.jpg' alt='missing' />
+                <figcaption>                
+                    <form action="https://flexsealproducts.com/products/flex-seal">
+                        <input type="submit" value="Szczegóły" />
+                    </form>
+                </figcaption>
+            </figure>
+        </row>
+    </p>
+    <br />
+    <h1 style="color: red;">
+        Prezentacja produktu
+    </h1>
+  
+
+    <p>
+        <iframe width="1040" height="630" src="https://www.youtube.com/embed/0xzN6FM5x_E" frameborder="0" allowfullscreen></iframe>
       </iframe>
     </p>
   
+    <hr>
+    <br />
+    <h1 style="color: red;">
+        Kontakt
+    </h1>
+    <p>
+        E-mail: jakisemail@gmail.com <br />
+        nr telefonu: 123 456 789
+    </p>
+    <h1 style="color: red;">
+        Formularz
+    </h1>
 
-    <button onclick="ShowMore()" id="textButton">
-        Pokaż wincyj
-    </button>
-
-  
+    <form style="line-height:2.5em;">
+        <label for="name">Imię i nazwisko:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="phone">telefon:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="desc">treść:</label><br>
+        <input type="text" id="desc" name="desc"><br>
+        <input type="submit" value="Wyślij">
+    </form> 
     <script>
         function ShowMore() {
             
@@ -56,7 +118,7 @@
 
                 points.style.display = "inline";
 
-                buttonText.innerHTML = "Pokaż tekst";
+                buttonText.innerHTML = "Pokaż więcej";
             }
   
 
